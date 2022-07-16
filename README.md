@@ -11,4 +11,5 @@
 
 # To connect with rshell
 1. `grep ls /dev/cu.* | grep cu.us` this will gives you the name of the device
-2. `rshell -p  /dev/cu.usbmodem1424301 --buffer-size 512`
+2. `rshell -p  /dev/cu.usbmodem1424301 --buffer-size 512` or just `rshell`
+3. to flash a file: `rshell cp test.py /pyboard/test.py`
