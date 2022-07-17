@@ -1,7 +1,7 @@
 #include "pico/stdlib.h"
-#include <stdbool.h>
 
-const unsigned int LED_PIN = 25;
+const uint LED_PIN = PICO_DEFAULT_LED_PIN;
+
 
 int main() {
 
@@ -9,9 +9,9 @@ int main() {
     gpio_set_dir(LED_PIN, GPIO_OUT);
 
     while (true) {
-        gpio_put(LED_PIN, true);
+        gpio_put(LED_PIN, 1);
         sleep_ms(1000);
-        gpio_put(LED_PIN, false);
+        gpio_put(LED_PIN, 0);
         sleep_ms(1000);
 
     }
